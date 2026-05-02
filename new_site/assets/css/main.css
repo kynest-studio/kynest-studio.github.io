@@ -3221,32 +3221,59 @@ input, select, textarea {
 	}
 
 
-/* 1. 전체 배경 고정 (로딩 전후 상관없이 유지) */
-html, body, #main {
-    background-color: #121212 !important; /* 배경을 다크로 강제 고정 */
-    color: #bbbbbb !important;
+/* ============================================================
+   Kynest Studio Global Fix (Slider & Dark Mode)
+   ============================================================ */
+
+/* 1. 배경색 깜빡임 방지 (html까지 타겟팅) */
+html, body {
+    background-color: #121212 !important;
 }
 
-/* 2. 왼쪽 사이드바 영역 */
-#header {
-    background-color: #000000 !important;
+#main, #header {
+    background-color: #121212 !important;
     background-image: none !important;
 }
 
-#header::after {
-    background-color: rgba(0, 0, 0, 0.6) !important;
-}
-
-/* 3. 로딩 중(is-preload) 스타일 무력화 */
-body.is-preload *, 
+/* 로딩 중(is-preload) 상태에서도 검은색 강제 */
+body.is-preload, 
 body.is-preload #main, 
-body.is-preload #header {
+body.is-preload #header,
+body.is-preload #header::before {
     background-color: #121212 !important;
-    transition: none !important; /* 번쩍이는 느낌 방지 */
+    background-image: none !important;
+    opacity: 1 !important;
+    transition: none !important;
 }
 
-/* 4. 텍스트 및 제목 강조 */
-h1, h2, h3, h4, h5, h6, strong {
+/* 2. 스크린샷 슬라이더 (사진 겹침 방지 핵심) */
+.screenshot-container {
+    display: flex !important;
+    flex-wrap: nowrap !important; /* 한 줄로 강제 */
+    overflow-x: auto !important; /* 좌우 스크롤 허용 */
+    gap: 20px !important;
+    padding: 20px 0 40px 0 !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+.screenshot-item {
+    flex: 0 0 260px !important; /* 중요: 줄어들지도(shrink), 늘어나지도 않게 고정 */
+    width: 260px !important;
+    margin: 0 !important;
+    position: relative !important;
+}
+
+.screenshot-item img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    border: 1px solid #333;
+}
+
+/* 3. 텍스트 및 제목 컬러 */
+h1, h2, h3, h4, h5, h6, strong, b {
     color: #ffffff !important;
 }
 
@@ -3257,27 +3284,14 @@ h1, h2, h3, h4, h5, h6, strong {
     margin-bottom: 1em;
 }
 
-/* 5. 버튼 스타일 고정 */
-.button.primary {
-    background-color: #49bf9d !important;
-    color: #ffffff !important;
-    box-shadow: none !important;
+/* 4. 스크롤바 디자인 (다크 모드용) */
+.screenshot-container::-webkit-scrollbar {
+    height: 6px;
 }
-
-.button.small {
-    border-color: #444 !important;
-    color: #888 !important;
+.screenshot-container::-webkit-scrollbar-thumb {
+    background: #49bf9d;
+    border-radius: 10px;
 }
-
-/* 6. 스크린샷 슬라이더 (레이아웃 보호) */
-.screenshot-container {
-    display: flex !important;
-    overflow-x: auto !important;
-    gap: 15px !important;
-    padding: 20px 0 35px 0 !important;
-}
-
-.screenshot-item {
-    flex: 0 0 auto !important;
-    width: 240px !important;
+.screenshot-container::-webkit-scrollbar-track {
+    background: #222;
 }
