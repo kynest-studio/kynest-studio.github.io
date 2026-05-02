@@ -3219,79 +3219,74 @@ input, select, textarea {
 			}
 
 	}
+/* --- Just Interval Premium Dark Fix --- */
 
-/* --- App Screenshot Slider (Added by Kynest) --- */
-/* --- Just Interval Premium Dark Theme --- */
-body.is-preload #main {
-    background-color: #1a1a1a; /* 깊은 다크 배경 */
-    color: #cccccc;
+/* 1. 메인 영역 다크화 (우선순위 강화) */
+#main {
+    background-color: #1a1a1a !important;
+    color: #cccccc !important;
+    padding: 4em 4em 2em 4em !important; /* 내부 여백 최적화 */
 }
 
-#main h2, #main h3, #main h4 {
-    color: #ffffff; /* 헤드라인은 선명하게 */
+/* 2. 텍스트 컬러 강제 지정 */
+#main h2, #main h3, #main h4, #main h2 strong, #main p strong {
+    color: #ffffff !important;
 }
 
-/* 스크린샷 슬라이더 개선 */
+#main h2 {
+    border-bottom: 2px solid #49bf9d;
+    display: inline-block;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+/* 3. 스크린샷 슬라이더 (레이아웃 붕괴 방지) */
 .screenshot-container {
-    display: flex;
-    overflow-x: auto;
-    gap: 18px;
-    padding: 20px 0 40px 0;
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    gap: 15px !important;
+    padding: 20px 0 40px 0 !important;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
 }
 
 .screenshot-container::-webkit-scrollbar {
-    height: 4px;
+    height: 6px;
 }
 
 .screenshot-container::-webkit-scrollbar-thumb {
-    background: #49bf9d; /* Strata 기본 포인트 컬러 */
+    background: #49bf9d;
     border-radius: 10px;
 }
 
 .screenshot-item {
-    flex: 0 0 auto;
-    width: 260px; 
+    flex: 0 0 auto !important;
+    width: 240px !important;
     aspect-ratio: 1242 / 2688;
     scroll-snap-align: start;
 }
 
 .screenshot-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 24px;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 15px;
     border: 1px solid #333;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4); /* 깊은 그림자로 입체감 */
-    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-.screenshot-item img:hover {
-    transform: translateY(-5px); /* 호버 시 살짝 떠오르는 효과 */
-}
-
-/* 버튼 디자인 통일 (Strata 스타일) */
+/* 4. 버튼 및 기타 요소 스타일 */
 .button.primary {
     background-color: #49bf9d !important;
     box-shadow: none !important;
-    color: #ffffff !important;
-}
-
-.button.primary:hover {
-    background-color: #58cfad !important;
 }
 
 .button.small {
     border-color: #444 !important;
-    color: #999 !important;
-}
-
-.button.small:hover {
-    border-color: #49bf9d !important;
-    color: #49bf9d !important;
+    color: #888 !important;
 }
 
 hr {
-    border-bottom: solid 1px #333;
+    border-bottom-color: #333 !important;
 }
