@@ -3219,74 +3219,80 @@ input, select, textarea {
 			}
 
 	}
-/* --- Just Interval Premium Dark Fix --- */
+/* ============================================================
+   Kynest Studio Global Dark Theme (Final Fix)
+   ============================================================ */
 
-/* 1. 메인 영역 다크화 (우선순위 강화) */
-#main {
-    background-color: #1a1a1a !important;
-    color: #cccccc !important;
-    padding: 4em 4em 2em 4em !important; /* 내부 여백 최적화 */
+/* 1. 사이드바 (왼쪽 영역) 어둡게 */
+#header {
+    background-color: #000000 !important; /* 배경색 자체를 검정으로 */
+    background-image: none !important; /* 혹시 모를 배경 이미지 제거 */
 }
 
-/* 2. 텍스트 컬러 강제 지정 */
-#main h2, #main h3, #main h4, #main h2 strong, #main p strong {
+#header::after {
+    background-color: rgba(0, 0, 0, 0.5) !important; /* 오버레이 어둡게 */
+}
+
+#header h1, #header h1 strong, #header p {
     color: #ffffff !important;
 }
 
-#main h2 {
-    border-bottom: 2px solid #49bf9d;
-    display: inline-block;
-    padding-bottom: 0.5em;
-    margin-bottom: 1em;
+#header .image.avatar {
+    border: 3px solid #49bf9d !important; /* 로고 테두리 포인트 컬러 */
 }
 
-/* 3. 스크린샷 슬라이더 (레이아웃 붕괴 방지) */
+/* 2. 본문 (오른쪽 영역) 다크화 */
+body, #main {
+    background-color: #121212 !important; /* 깊은 다크 그레이 */
+    color: #bbbbbb !important;
+}
+
+/* 3. 모든 텍스트 컬러 조정 */
+h1, h2, h3, h4, h5, h6, strong {
+    color: #ffffff !important;
+}
+
+a {
+    color: #49bf9d !important;
+    border-bottom-color: rgba(73, 191, 157, 0.5) !important;
+}
+
+a:hover {
+    color: #58cfad !important;
+}
+
+/* 4. 구분선 및 버튼 */
+hr {
+    border-bottom-color: #333333 !important;
+}
+
+.button.primary {
+    background-color: #49bf9d !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.button.small {
+    border-color: #444444 !important;
+    color: #888888 !important;
+}
+
+/* 5. 스크린샷 슬라이더 (상세 페이지용) */
 .screenshot-container {
     display: flex !important;
-    flex-direction: row !important;
     overflow-x: auto !important;
     gap: 15px !important;
-    padding: 20px 0 40px 0 !important;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-}
-
-.screenshot-container::-webkit-scrollbar {
-    height: 6px;
-}
-
-.screenshot-container::-webkit-scrollbar-thumb {
-    background: #49bf9d;
-    border-radius: 10px;
+    padding: 20px 0 35px 0 !important;
 }
 
 .screenshot-item {
     flex: 0 0 auto !important;
     width: 240px !important;
-    aspect-ratio: 1242 / 2688;
-    scroll-snap-align: start;
 }
 
 .screenshot-item img {
     width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    border-radius: 15px;
-    border: 1px solid #333;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-/* 4. 버튼 및 기타 요소 스타일 */
-.button.primary {
-    background-color: #49bf9d !important;
-    box-shadow: none !important;
-}
-
-.button.small {
-    border-color: #444 !important;
-    color: #888 !important;
-}
-
-hr {
-    border-bottom-color: #333 !important;
+    height: auto !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8) !important;
 }
