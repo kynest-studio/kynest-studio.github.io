@@ -3220,78 +3220,133 @@ input, select, textarea {
 
 	}
 
-
-/* ============================================================
-   Kynest Studio Global Fix (Slider & Dark Mode)
-   ============================================================ */
-
-/* 1. 배경색 깜빡임 방지 (html까지 타겟팅) */
-html, body {
-    background-color: #121212 !important;
-}
-
-#main, #header {
-    background-color: #121212 !important;
-    background-image: none !important;
-}
-
-/* 로딩 중(is-preload) 상태에서도 검은색 강제 */
-body.is-preload, 
-body.is-preload #main, 
-body.is-preload #header,
-body.is-preload #header::before {
-    background-color: #121212 !important;
-    background-image: none !important;
-    opacity: 1 !important;
-    transition: none !important;
-}
-
-/* 2. 스크린샷 슬라이더 (사진 겹침 방지 핵심) */
-.screenshot-container {
+.title-with-icon {
     display: flex !important;
-    flex-wrap: nowrap !important; /* 한 줄로 강제 */
-    overflow-x: auto !important; /* 좌우 스크롤 허용 */
-    gap: 20px !important;
-    padding: 20px 0 40px 0 !important;
-    -webkit-overflow-scrolling: touch;
+    align-items: center !important; /* 세로 중앙 정렬 */
+    gap: 15px !important; /* 아이콘과 글자 사이 간격 */
+    border-bottom: none !important; /* 기존 h2 밑줄 제거 (필요 시) */
 }
 
-.screenshot-item {
-    flex: 0 0 260px !important; /* 중요: 줄어들지도(shrink), 늘어나지도 않게 고정 */
-    width: 260px !important;
-    margin: 0 !important;
-    position: relative !important;
+.title-with-icon img {
+    height: 60px !important; /* 아이콘 크기 */
+    width: auto !important;
+    border-radius: 14px !important; /* 앱 아이콘 느낌의 둥근 모서리 */
+    background-color: #222; /* 아이콘 배경이 투명할 경우 대비 */
 }
 
-.screenshot-item img {
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    border: 1px solid #333;
-}
-
-/* 3. 텍스트 및 제목 컬러 */
-h1, h2, h3, h4, h5, h6, strong, b {
-    color: #ffffff !important;
-}
-
+/* 기존 h2 하단 선이 필요하다면 아래 설정 유지 */
 #main h2 {
-    border-bottom: 2px solid #49bf9d;
-    display: inline-block;
-    padding-bottom: 0.3em;
+    border-bottom: 2px solid #333;
+    display: flex;
+    padding-bottom: 0.5em;
     margin-bottom: 1em;
 }
 
-/* 4. 스크롤바 디자인 (다크 모드용) */
-.screenshot-container::-webkit-scrollbar {
-    height: 6px;
+/* --- Just Interval: Final Left Aligned with Titles --- */
+
+/* 1. 본문 영역 배경 및 왼쪽 정렬 */
+#main {
+    background-color: #121212 !important;
+    color: #bbbbbb !important;
+    text-align: left !important;
 }
-.screenshot-container::-webkit-scrollbar-thumb {
-    background: #49bf9d;
-    border-radius: 10px;
+
+#main h1, #main h2, #main h3, #main h4, #main strong {
+    color: #ffffff !important;
 }
-.screenshot-container::-webkit-scrollbar-track {
-    background: #222;
+
+/* 타이틀 하단 여백 조정 */
+#main h4 {
+    margin-bottom: 1.5em !important;
+}
+
+/* 2. 스크린샷 슬라이더 (경로 유지) */
+.screenshot-container {
+    display: flex !important;
+    overflow-x: auto !important;
+    gap: 15px !important;
+    padding: 20px 0 40px 0 !important;
+}
+.screenshot-item {
+    flex: 0 0 250px !important;
+    width: 250px !important;
+}
+.screenshot-item img {
+    width: 100% !important;
+    border-radius: 15px;
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* 3. 스토어 버튼 스타일 (민트 제외) */
+#main .actions {
+    display: flex !important;
+    justify-content: flex-start !important;
+    padding: 0 !important;
+    list-style: none !important;
+    margin: 1.5em 0 2.5em 0 !important; /* 타이틀과의 간격 조정 */
+}
+
+#main .actions li {
+    padding: 0 1em 0 0 !important;
+}
+
+.button.primary {
+    background-color: #333 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.button.primary:hover {
+    background-color: #444 !important;
+}
+
+/* 4. 최하단 법적 텍스트 링크 */
+.legal-links {
+    text-align: left !important;
+    margin-top: 2em;
+    font-size: 0.85em;
+}
+
+.legal-links a {
+    color: #888 !important;
+    text-decoration: none;
+    border-bottom: none !important;
+    transition: color 0.2s ease;
+}
+
+.legal-links a:hover {
+    color: #ffffff !important;
+}
+
+.legal-links .separator {
+    margin: 0 10px;
+    color: #333;
+}
+
+/* 5. 구분선 */
+#main hr {
+    border-bottom-color: #222 !important;
+    margin: 2.5em 0;
+}
+
+.work-item .image.thumb:after,
+.work-item .image.thumb:before {
+    display: none !important;
+}
+
+.work-item .image.thumb {
+    pointer-events: auto !important;
+}
+
+.work-item .image.thumb {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: block;
+}
+
+.work-item .image.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
