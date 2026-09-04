@@ -874,3 +874,323 @@ button {
     }
 
 }
+
+/* =========================================================
+   Legal / Support Pages
+   ========================================================= */
+
+.page-hero {
+    padding: 100px 0 70px;
+}
+
+.page-hero-inner {
+    max-width: 820px;
+}
+
+.page-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 34px;
+
+    color: var(--text-muted);
+    font-size: 0.86rem;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+.page-back-link:hover {
+    color: var(--text);
+}
+
+.page-hero h1 {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1;
+
+    letter-spacing: -0.06em;
+}
+
+.page-description {
+    max-width: 700px;
+
+    margin: 26px 0 0;
+
+    color: var(--text-soft);
+
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+.page-meta {
+    margin-top: 24px;
+
+    color: var(--text-muted);
+
+    font-size: 0.82rem;
+}
+
+
+/* Document body */
+
+.document-section {
+    padding: 30px 0 120px;
+}
+
+.document-container {
+    max-width: 820px;
+}
+
+.document-content {
+    padding-top: 56px;
+
+    border-top: 1px solid var(--border);
+}
+
+.document-content h2 {
+    margin: 64px 0 18px;
+
+    color: var(--text);
+
+    font-size: 1.5rem;
+    font-weight: 650;
+
+    line-height: 1.35;
+    letter-spacing: -0.025em;
+}
+
+.document-content h2:first-child {
+    margin-top: 0;
+}
+
+.document-content p {
+    margin: 0 0 22px;
+
+    color: var(--text-soft);
+
+    line-height: 1.8;
+}
+
+.document-content ul {
+    margin: 0 0 28px;
+
+    padding-left: 1.3rem;
+}
+
+.document-content li {
+    margin-bottom: 10px;
+
+    color: var(--text-soft);
+
+    line-height: 1.75;
+}
+
+.document-content strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.document-content a {
+    color: var(--text);
+
+    border-bottom: 1px solid #45454c;
+
+    transition: border-color 0.2s ease;
+}
+
+.document-content a:hover {
+    border-color: var(--text);
+}
+
+
+/* Bottom navigation */
+
+.document-navigation {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 80px;
+    padding-top: 32px;
+
+    border-top: 1px solid var(--border);
+}
+
+.document-navigation a {
+    padding: 9px 14px;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    color: var(--text-soft);
+
+    font-size: 0.82rem;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.document-navigation a:hover {
+    color: var(--text);
+
+    background: var(--surface);
+
+    border-color: #414149;
+}
+
+
+/* Support */
+
+.support-page-section {
+    padding: 20px 0 120px;
+}
+
+.support-page-container {
+    max-width: 900px;
+}
+
+.support-info {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+    margin-bottom: 54px;
+}
+
+.support-info-card {
+    padding: 28px;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+
+    background: var(--surface);
+}
+
+.support-info-card span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--text-muted);
+
+    font-size: 0.72rem;
+    font-weight: 650;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.support-info-card h2 {
+    margin: 0 0 10px;
+
+    color: var(--text);
+
+    font-size: 1.25rem;
+}
+
+.support-info-card p {
+    margin: 0;
+
+    font-size: 0.9rem;
+}
+
+.support-info-card a {
+    color: var(--text);
+}
+
+
+/* Tally */
+
+.tally-panel {
+    padding: 42px;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+
+    background: var(--surface);
+}
+
+.tally-panel-header {
+    margin-bottom: 28px;
+}
+
+.tally-panel-header h2 {
+    margin: 0 0 8px;
+
+    color: var(--text);
+
+    font-size: 1.5rem;
+}
+
+.tally-panel-header p {
+    margin: 0;
+
+    font-size: 0.92rem;
+}
+
+.tally-container {
+    width: 100%;
+    min-height: 500px;
+}
+
+.tally-container iframe {
+    display: block;
+
+    width: 100%;
+
+    border: 0;
+}
+
+
+/* Mobile document pages */
+
+@media (max-width: 720px) {
+
+    .page-hero {
+        padding: 70px 0 50px;
+    }
+
+    .page-hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .document-section {
+        padding-bottom: 85px;
+    }
+
+    .document-content {
+        padding-top: 38px;
+    }
+
+    .document-content h2 {
+        margin-top: 48px;
+
+        font-size: 1.3rem;
+    }
+
+    .support-page-section {
+        padding-bottom: 85px;
+    }
+
+    .support-info {
+        grid-template-columns: 1fr;
+    }
+
+    .tally-panel {
+        padding: 26px 20px;
+
+        border-radius: var(--radius-medium);
+    }
+
+}
