@@ -1050,29 +1050,6 @@ a {
 }
 
 
-.contact-footer-info {
-    display: flex;
-    justify-content: space-between;
-
-    gap: 24px;
-
-    margin-top: 22px;
-
-    color: var(--text-muted);
-
-    font-size: 0.8rem;
-}
-
-
-.contact-footer-info a {
-    color: var(--text-soft);
-}
-
-
-.contact-footer-info a:hover {
-    color: var(--text);
-}
-
 
 @media (max-width: 720px) {
 
@@ -1093,12 +1070,6 @@ a {
 
     .contact-button {
         width: 100%;
-    }
-
-    .contact-footer-info {
-        flex-direction: column;
-
-        gap: 8px;
     }
 
 }
