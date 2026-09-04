@@ -406,7 +406,8 @@ button {
 }
 
 .screenshot-rail {
-    width: 100%;
+    width: min(var(--max-width), calc(100% - 48px));
+    margin: 0 auto;
 
     overflow-x: auto;
     overflow-y: hidden;
@@ -426,13 +427,7 @@ button {
 
     width: max-content;
 
-    padding-left:
-        max(
-            24px,
-            calc((100vw - var(--max-width)) / 2)
-        );
-
-    padding-right: 48px;
+    padding-right: 24px;
 }
 
 .screenshot {
@@ -817,12 +812,15 @@ button {
         width: 225px;
     }
 
-    .screenshot-track {
-        gap: 14px;
+.screenshot-rail {
+    width: calc(100% - 32px);
+}
 
-        padding-left: 16px;
-        padding-right: 32px;
-    }
+.screenshot-track {
+    gap: 14px;
+
+    padding-right: 16px;
+}
 
     .feature-grid {
         grid-template-columns: 1fr;
