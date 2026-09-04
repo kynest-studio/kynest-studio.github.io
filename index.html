@@ -403,45 +403,47 @@
             </div>
 
 
-            <div class="studio-contact-grid">
+            <div class="studio-contact-panel">
 
-                <div class="studio-contact-info">
+                <div>
 
-                    <div class="contact-info-item">
-                        <span>Studio</span>
-                        <strong>Kynest Studio</strong>
-                        <p>Independent Mobile App Studio</p>
-                    </div>
+                <span class="contact-panel-label">
+                    Get in touch
+                </span>
 
+                    <h3>
+                        Let's talk.
+                    </h3>
 
-                    <div class="contact-info-item">
-                        <span>Email</span>
-
-                        <a href="mailto:kynest.studio@gmail.com">
-                            kynest.studio@gmail.com
-                        </a>
-                    </div>
-
-
-                    <div class="contact-note">
-                        Looking for help with one of our apps?
-                        Please use the Support page for the relevant app.
-                    </div>
+                    <p>
+                        For business inquiries, collaborations, project opportunities,
+                        or general questions about Kynest Studio.
+                    </p>
 
                 </div>
 
 
-                <div class="studio-tally-panel">
+                <a
+                        href="https://tally.so/r/GxP8pj"
+                        class="contact-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                >
+                    Contact Kynest Studio →
+                </a>
 
-                    <iframe
-                            data-tally-src="https://tally.so/embed/GxP8pj?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                            loading="lazy"
-                            width="100%"
-                            height="500"
-                            title="Contact Kynest Studio">
-                    </iframe>
+            </div>
 
-                </div>
+
+            <div class="contact-footer-info">
+
+                <a href="mailto:kynest.studio@gmail.com">
+                    kynest.studio@gmail.com
+                </a>
+
+                <span>
+                App support is available from each app's support page.
+            </span>
 
             </div>
 
@@ -472,37 +474,6 @@
 
     </div>
 </footer>
-
-
-<script>
-    var d = document;
-    var w = "https://tally.so/widgets/embed.js";
-
-    var v = function () {
-        if (typeof Tally !== "undefined") {
-            Tally.loadEmbeds();
-        } else {
-            d.querySelectorAll(
-                "iframe[data-tally-src]:not([src])"
-            ).forEach(function (e) {
-                e.src = e.dataset.tallySrc;
-            });
-        }
-    };
-
-    if (typeof Tally !== "undefined") {
-        v();
-    } else if (d.querySelector('script[src="' + w + '"]') === null) {
-
-        var s = d.createElement("script");
-
-        s.src = w;
-        s.onload = v;
-        s.onerror = v;
-
-        d.body.appendChild(s);
-    }
-</script>
 
 </body>
 </html>
