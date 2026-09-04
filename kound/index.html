@@ -1,98 +1,386 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>kound - Kynest Studio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="icon" href="../images/kynest_logo.png" />
-    <style>
-        .actions li {
-            margin-bottom: 1.5em;
-            margin-right: 1em;
-        }
 
-        .legal-links {
-            text-align: center;
-            margin-top: 3em;
-            width: 100%;
-        }
+    <meta
+            name="description"
+            content="kound is a focused Korean learning app designed to help beginners master Hangul and start reading Korean."
+    >
 
-        .legal-links a {
-            display: inline-block;
-            margin: 0 0.5em;
-        }
-    </style>
+    <link rel="icon" href="../images/kynest_logo.png">
+    <link rel="stylesheet" href="../assets/css/app.css">
 </head>
-<body class="is-preload">
-<header id="header">
-    <div class="inner">
-        <a href="../index.html" class="image avatar"><img src="../images/kynest_logo.png" alt="Logo" /></a>
-        <h1><strong><a href="../index.html" style="border: none;">Kynest Studio</a></strong></h1>
+
+<body>
+
+<header class="site-header">
+    <div class="container nav-container">
+
+        <a href="../index.html" class="brand">
+            <img src="../images/kynest_logo.png" alt="Kynest Studio">
+            <span>Kynest Studio</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#screenshots">Screenshots</a>
+            <a href="#features">Features</a>
+            <a href="#download">Download</a>
+            <a href="support.html">Support</a>
+        </nav>
+
     </div>
 </header>
 
-<div id="main">
-    <section id="one">
-        <header class="major">
-            <h2 class="title-with-icon">
-                <img src="../images/thumbs/kound.png" alt="Icon" />
-                kound
-            </h2>
-            <p>Master Hangul: The Easiest Way to Read Korean</p>
-        </header>
 
-        <div class="screenshot-container">
-            <div class="screenshot-item"><img src="../images/screenshots/kound/ss1.jpg" alt="SS1" /></div>
-            <div class="screenshot-item"><img src="../images/screenshots/kound/ss2.jpg" alt="SS2" /></div>
-            <div class="screenshot-item"><img src="../images/screenshots/kound/ss3.jpg" alt="SS3" /></div>
-            <div class="screenshot-item"><img src="../images/screenshots/kound/ss4.jpg" alt="SS4" /></div>
-            <div class="screenshot-item"><img src="../images/screenshots/kound/ss5.jpg" alt="SS5" /></div>
-        </div>
+<main>
 
-        <p style="margin-top: 2em;">Stop struggling with subtitles and start reading for yourself. <strong>kound</strong> is a minimalist, high-efficiency learning tool designed to help you master the Korean alphabet in record time. Whether you're a K-pop fan or a traveler, this is your first step into a new world.</p>
+    <!-- App Hero -->
+    <section class="app-hero">
+        <div class="container app-hero-grid">
 
-        <h4>Core Features</h4>
-        <ul>
-            <li><strong>Intuitive Learning:</strong> A logical progression from basic strokes to complex syllables.</li>
-            <li><strong>Verified Content:</strong> Developed with certified Korean language teachers for maximum accuracy.</li>
-            <li><strong>Practical Vocabulary:</strong> Learn to read using 1,000+ essential words used in real-life Korea.</li>
-            <li><strong>Zero Friction:</strong> No sign-ups, no unnecessary data collection—just pure learning.</li>
-        </ul>
+            <div class="app-identity">
 
-        <hr />
+                <img
+                        class="app-icon"
+                        src="../images/thumbs/kound.png"
+                        alt="kound app icon"
+                >
 
-        <h4>Available On</h4>
+                <div>
+                    <div class="app-status">
+                        Available on iOS &amp; Android
+                    </div>
 
-        <ul class="actions">
-            <li><a href="https://play.google.com/store/apps/details?id=dev.kynest.kound&hl=en" class="button icon brands fa-google-play">Google Play</a></li>
-            <li><a href="https://apps.apple.com/kr/app/kound-learn-korean-alphabet/id6754219915" class="button icon brands fa-apple">App Store</a></li>
-        </ul>
-        <hr />
+                    <h1>kound</h1>
 
-        <div class="legal-links">
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <span class="separator">|</span>
-            <a href="terms-of-use.html">Terms of Use</a>
-            <span class="separator">|</span>
-            <a href="support.html">Support</a>
+                    <p class="app-tagline">
+                        Master Hangul: The Easiest Way to Read Korean
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="app-intro">
+
+                <h2>
+                    Start reading Korean.<br>
+                    One step at a time.
+                </h2>
+
+                <p>
+                    kound is a focused learning app designed to help beginners
+                    understand Hangul, build reading confidence, and learn
+                    practical Korean vocabulary through a clear progression.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                            href="https://play.google.com/store/apps/details?id=dev.kynest.kound&hl=en"
+                            class="store-button store-button-primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                    >
+                        <span class="store-small">Get it on</span>
+                        <span>Google Play</span>
+                    </a>
+
+                    <a
+                            href="https://apps.apple.com/kr/app/kound-learn-korean-alphabet/id6754219915"
+                            class="store-button"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                    >
+                        <span class="store-small">Download on the</span>
+                        <span>App Store</span>
+                    </a>
+
+                </div>
+
+                <div class="app-tags">
+                    <span>Education</span>
+                    <span>Korean</span>
+                    <span>Hangul</span>
+                    <span>iOS</span>
+                    <span>Android</span>
+                </div>
+
+            </div>
+
         </div>
     </section>
-</div>
 
-<footer id="footer">
-    <div class="inner">
-        <ul class="copyright">
-            <li>&copy; 2026 Kynest Studio.</li>
-        </ul>
+
+    <!-- Screenshots -->
+    <section id="screenshots" class="section screenshots-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-label">App Preview</span>
+
+                <h2>
+                    Learn clearly.<br>
+                    Progress naturally.
+                </h2>
+
+                <p>
+                    A simple learning flow designed to keep the focus on reading,
+                    writing, and understanding Hangul.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="screenshot-rail">
+
+            <div class="screenshot-track">
+
+                <div class="screenshot">
+                    <img src="../images/screenshots/kound/ss1.jpg" alt="kound screenshot 1">
+                </div>
+
+                <div class="screenshot">
+                    <img src="../images/screenshots/kound/ss2.jpg" alt="kound screenshot 2">
+                </div>
+
+                <div class="screenshot">
+                    <img src="../images/screenshots/kound/ss3.jpg" alt="kound screenshot 3">
+                </div>
+
+                <div class="screenshot">
+                    <img src="../images/screenshots/kound/ss4.jpg" alt="kound screenshot 4">
+                </div>
+
+                <div class="screenshot">
+                    <img src="../images/screenshots/kound/ss5.jpg" alt="kound screenshot 5">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section id="features" class="section section-muted">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-label">Core Features</span>
+
+                <h2>
+                    Built for a strong beginning.
+                </h2>
+            </div>
+
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+                    <span class="feature-number">01</span>
+
+                    <h3>Intuitive Learning</h3>
+
+                    <p>
+                        Progress logically from basic Hangul strokes
+                        to complete syllables and words.
+                    </p>
+                </article>
+
+
+                <article class="feature-card">
+                    <span class="feature-number">02</span>
+
+                    <h3>Verified Content</h3>
+
+                    <p>
+                        Learning content developed with certified
+                        Korean language teachers for accuracy.
+                    </p>
+                </article>
+
+
+                <article class="feature-card">
+                    <span class="feature-number">03</span>
+
+                    <h3>Practical Vocabulary</h3>
+
+                    <p>
+                        Practice reading with more than 1,000 useful words
+                        found in everyday Korean.
+                    </p>
+                </article>
+
+
+                <article class="feature-card">
+                    <span class="feature-number">04</span>
+
+                    <h3>Zero Friction</h3>
+
+                    <p>
+                        No account required and no unnecessary steps.
+                        Open the app and start learning.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Download -->
+    <section id="download" class="section download-section">
+
+        <div class="container download-panel">
+
+            <div>
+
+                <span class="section-label">
+                    Available Now
+                </span>
+
+                <h2>
+                    Start with Hangul.
+                </h2>
+
+                <p>
+                    Download kound for iPhone, iPad, or Android.
+                </p>
+
+            </div>
+
+
+            <div class="download-buttons">
+
+                <a
+                        href="https://play.google.com/store/apps/details?id=dev.kynest.kound&hl=en"
+                        class="store-button store-button-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                >
+                    <span class="store-small">Get it on</span>
+                    <span>Google Play</span>
+                </a>
+
+                <a
+                        href="https://apps.apple.com/kr/app/kound-learn-korean-alphabet/id6754219915"
+                        class="store-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                >
+                    <span class="store-small">Download on the</span>
+                    <span>App Store</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Resources -->
+    <section class="section app-resources">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-label">Resources</span>
+
+                <h2>
+                    Support &amp; information
+                </h2>
+            </div>
+
+
+            <div class="resource-grid">
+
+                <a href="support.html" class="resource-card">
+                    <div>
+                        <span class="resource-type">Help</span>
+                        <h3>Support &amp; Feedback</h3>
+                        <p>
+                            Questions, bug reports, or suggestions.
+                        </p>
+                    </div>
+
+                    <span class="resource-arrow">→</span>
+                </a>
+
+
+                <a href="privacy-policy.html" class="resource-card">
+                    <div>
+                        <span class="resource-type">Legal</span>
+                        <h3>Privacy Policy</h3>
+                        <p>
+                            Learn how kound handles information.
+                        </p>
+                    </div>
+
+                    <span class="resource-arrow">→</span>
+                </a>
+
+
+                <a href="terms-of-use.html" class="resource-card">
+                    <div>
+                        <span class="resource-type">Legal</span>
+                        <h3>Terms of Use</h3>
+                        <p>
+                            Terms governing use of kound.
+                        </p>
+                    </div>
+
+                    <span class="resource-arrow">→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container footer-content">
+
+        <div>
+            <a href="../index.html" class="footer-brand">
+                Kynest Studio
+            </a>
+
+            <p>Independent Mobile App Studio</p>
+        </div>
+
+
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="privacy-policy.html">Privacy</a>
+            <a href="terms-of-use.html">Terms</a>
+        </div>
+
+
+        <div class="copyright">
+            © 2026 Kynest Studio. All rights reserved.
+        </div>
+
     </div>
-</footer>
 
-<script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/js/browser.min.js"></script>
-<script src="../assets/js/breakpoints.min.js"></script>
-<script src="../assets/js/util.js"></script>
-<script src="../assets/js/main.js"></script>
+</footer>
 
 </body>
 </html>

@@ -208,6 +208,11 @@ button {
     background: rgba(108, 211, 153, 0.08);
 }
 
+.app-status.coming-soon {
+    color: #bdbdc3;
+    background: rgba(255, 255, 255, 0.06);
+}
+
 .app-identity h1 {
     margin: 0;
 
