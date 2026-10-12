@@ -3,29 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kynest Studio develops mobile apps and games for iOS and Android.">
 
     <title>Kynest Studio</title>
 
-    <meta
-            name="description"
-            content="Kynest Studio is an independent mobile app studio creating simple, purposeful apps and games for iOS and Android."
-    >
-
     <link rel="icon" href="images/kynest_logo.png">
     <link rel="stylesheet" href="assets/css/home.css">
+
+    <style>
+        /* Home page layout */
+
+        .container {
+            width: min(900px, calc(100% - 48px));
+        }
+
+        /* Header */
+
+        .site-header {
+            position: relative;
+            background: var(--bg);
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+        .nav-container {
+            min-height: 72px;
+        }
+
+        .brand img {
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+        }
+
+        .nav-links {
+            gap: 28px;
+        }
+
+        /* Hero */
+
+        .hero {
+            display: block;
+            min-height: 0;
+            padding: 90px 0 62px;
+        }
+
+        .hero h1 {
+            max-width: none;
+            font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+            line-height: 1.12;
+            letter-spacing: -0.05em;
+        }
+
+        .hero-description {
+            max-width: 720px;
+            margin: 16px 0 0;
+            font-size: 1.08rem;
+        }
+
+        /* Apps */
+
+        .simple-section {
+            padding: 32px 0 76px;
+        }
+
+        .simple-heading {
+            margin: 0 0 18px;
+            color: var(--text);
+            font-size: 1.15rem;
+            font-weight: 650;
+            letter-spacing: -0.025em;
+        }
+
+        .app-list {
+            border-top: 1px solid var(--border);
+        }
+
+        .app-entry {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding: 25px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .app-cover {
+            display: block;
+            flex: 0 0 112px;
+            width: 112px;
+            height: 112px;
+            overflow: hidden;
+            border-radius: 18px;
+        }
+
+        .app-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .app-info {
+            min-width: 0;
+        }
+
+        .app-info h3 {
+            margin: 0;
+            color: var(--text);
+            font-size: 1.38rem;
+            font-weight: 650;
+            letter-spacing: -0.025em;
+        }
+
+        .app-info h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .app-info p {
+            margin: 4px 0 0;
+            font-size: 0.95rem;
+        }
+
+        .app-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+            margin-top: 14px;
+        }
+
+        .app-actions a {
+            color: var(--text);
+            font-size: 0.84rem;
+            font-weight: 500;
+        }
+
+        .app-actions a:hover {
+            text-decoration: underline;
+        }
+
+        /* About & Contact */
+
+        .info-section {
+            border-top: 1px solid var(--border);
+            padding: 31px 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 140px minmax(0, 1fr);
+            gap: 20px 48px;
+        }
+
+        .info-grid h2 {
+            margin: 0;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 650;
+        }
+
+        .info-grid p {
+            max-width: 590px;
+            margin: 0;
+        }
+
+        .info-grid .contact-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--text);
+            font-size: 0.92rem;
+            font-weight: 600;
+        }
+
+        .info-grid .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+
+        .site-footer {
+            margin-top: 45px;
+        }
+
+        .simple-footer {
+            padding: 27px 0 35px;
+            color: var(--text-muted);
+            font-size: 0.81rem;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 720px) {
+            .container {
+                width: calc(100% - 36px);
+            }
+
+            .nav-container {
+                min-height: 68px;
+                flex-direction: row;
+                align-items: center;
+                gap: 12px;
+                padding: 0;
+            }
+
+            .brand {
+                gap: 8px;
+                font-size: 0.89rem;
+            }
+
+            .brand img {
+                width: 30px;
+                height: 30px;
+            }
+
+            .nav-links {
+                width: auto;
+                flex-wrap: nowrap;
+                justify-content: flex-end;
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 0.79rem;
+            }
+
+            .hero {
+                padding: 63px 0 45px;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.55rem, 9vw, 3.4rem);
+            }
+
+            .hero-description {
+                margin-top: 14px;
+                font-size: 0.99rem;
+            }
+
+            .simple-section {
+                padding: 26px 0 54px;
+            }
+
+            .app-entry {
+                gap: 17px;
+                padding: 21px 0;
+            }
+
+            .app-cover {
+                flex-basis: 86px;
+                width: 86px;
+                height: 86px;
+                border-radius: 14px;
+            }
+
+            .app-info h3 {
+                font-size: 1.2rem;
+            }
+
+            .app-info p {
+                font-size: 0.86rem;
+            }
+
+            .app-actions {
+                gap: 7px 14px;
+                margin-top: 10px;
+            }
+
+            .app-actions a {
+                font-size: 0.77rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 9px;
+            }
+
+            .site-footer {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .brand span {
+                font-size: 0.83rem;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 0.74rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
+<!-- Header -->
 <header class="site-header">
     <div class="container nav-container">
 
-        <a href="#" class="brand">
-            <img src="images/kynest_logo.png" alt="Kynest Studio">
+        <a
+                class="brand"
+                href="./"
+                aria-label="Kynest Studio home"
+        >
+            <img
+                    src="images/kynest_logo.png"
+                    alt=""
+            >
             <span>Kynest Studio</span>
         </a>
 
-        <nav class="nav-links" aria-label="Main navigation">
+        <nav
+                class="nav-links"
+                aria-label="Main navigation"
+        >
             <a href="#apps">Apps</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
@@ -34,257 +327,48 @@
     </div>
 </header>
 
+
 <main>
 
     <!-- Hero -->
     <section class="hero">
-        <div class="container hero-content">
-
-            <div class="eyebrow">
-                Independent Mobile App Studio
-            </div>
-
-            <h1>
-                Designed to be clear.<br>
-                Built to be useful.
-            </h1>
-
-            <p class="hero-description">
-                Kynest Studio creates focused mobile experiences
-                designed to be useful, intuitive, and enjoyable.
-            </p>
-
-            <div class="hero-actions">
-                <a href="#apps" class="button button-primary">
-                    Explore Our Apps
-                </a>
-
-                <a href="#contact" class="button button-secondary">
-                    Get In Touch
-                </a>
-            </div>
-
-            <div class="studio-meta">
-                <span>iOS</span>
-                <span>Android</span>
-                <span>Independent Studio</span>
-                <span>South Korea</span>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- Featured -->
-    <section class="section featured-section">
         <div class="container">
 
-            <div class="section-heading">
-                <span class="section-label">Featured</span>
-                <h2>Now available</h2>
-            </div>
+            <h1>Apps &amp; Games</h1>
 
-            <a href="million-ways/" class="featured-card">
-
-                <div class="featured-image">
-                    <img
-                            src="images/thumbs/million_ways.png"
-                            alt="Million Ways: Puzzle Journey"
-                    >
-                </div>
-
-                <div class="featured-content">
-
-                    <div class="status status-live">
-                        Available
-                    </div>
-
-                    <h3>Million Ways: Puzzle Journey</h3>
-
-                    <p class="featured-tagline">
-                        See the world, one piece at a time.
-                    </p>
-
-                    <p>
-                        Relax with puzzles made from real travel photos,
-                        explore the world, discover hidden spots, collect souvenirs,
-                        and build your own journey album.
-                    </p>
-
-                    <div class="tags">
-                        <span>Puzzle</span>
-                        <span>Travel</span>
-                        <span>Collection</span>
-                    </div>
-
-                    <span class="text-link">
-            Discover Million Ways →
-        </span>
-
-                </div>
-
-            </a>
+            <p class="hero-description">
+                Mobile apps and games by Kynest Studio.
+            </p>
 
         </div>
     </section>
 
 
     <!-- Apps -->
-    <section id="apps" class="section">
+    <section id="apps" class="simple-section">
         <div class="container">
 
-            <div class="section-heading">
-                <span class="section-label">Our Apps</span>
-                <h2>Apps with a clear purpose.</h2>
+            <h2 class="simple-heading">Apps</h2>
 
-                <p>
-                    Tools, learning experiences, and games designed to be simple, useful, and
-                    enjoyable.
-                </p>
-            </div>
-
-
-            <div class="app-grid">
-
-                <!-- Just Interval -->
-                <article class="app-card">
-
-                    <a href="just-interval/" class="app-image">
-                        <img
-                                src="images/thumbs/just_interval.png"
-                                alt="Just Interval"
-                        >
-                    </a>
-
-                    <div class="app-content">
-
-                        <div class="app-topline">
-                            <span class="status status-live">
-                                Available
-                            </span>
-                        </div>
-
-                        <h3>
-                            <a href="just-interval/">
-                                Just Interval
-                            </a>
-                        </h3>
-
-                        <p class="app-subtitle">
-                            Minimal & Powerful Interval Timer
-                        </p>
-
-                        <div class="tags">
-                            <span>Fitness</span>
-                            <span>Timer</span>
-                            <span>Ad-Free</span>
-                        </div>
-
-                        <div class="app-links">
-                            <a
-                                    href="https://play.google.com/store/apps/details?id=dev.just_interval&hl=en"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                            >
-                                Google Play
-                            </a>
-
-                            <a
-                                    href="https://apps.apple.com/us/app/just-interval-workout-timer/id6755115302"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                            >
-                                App Store
-                            </a>
-
-                            <a href="just-interval/">
-                                Details →
-                            </a>
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- kound -->
-                <article class="app-card">
-
-                    <a href="kound/" class="app-image">
-                        <img
-                                src="images/thumbs/kound.png"
-                                alt="kound"
-                        >
-                    </a>
-
-                    <div class="app-content">
-
-                        <div class="app-topline">
-                            <span class="status status-live">
-                                Available
-                            </span>
-                        </div>
-
-                        <h3>
-                            <a href="kound/">
-                                Kound
-                            </a>
-                        </h3>
-
-                        <p class="app-subtitle">
-                            Master Hangul: The Easiest Way to Read Korean
-                        </p>
-
-                        <div class="tags">
-                            <span>Education</span>
-                            <span>Korean</span>
-                            <span>Learning</span>
-                        </div>
-
-                        <div class="app-links">
-                            <a
-                                    href="https://play.google.com/store/apps/details?id=dev.kynest.kound&hl=en"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                            >
-                                Google Play
-                            </a>
-
-                            <a
-                                    href="https://apps.apple.com/kr/app/kound-learn-korean-alphabet/id6754219915"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                            >
-                                App Store
-                            </a>
-
-                            <a href="kound/">
-                                Details →
-                            </a>
-                        </div>
-
-                    </div>
-
-                </article>
-
+            <div class="app-list">
 
                 <!-- Million Ways -->
-                <article class="app-card">
+                <article class="app-entry">
 
-                    <a href="million-ways/" class="app-image">
+                    <a
+                            class="app-cover"
+                            href="million-ways/"
+                            aria-label="Million Ways details"
+                    >
                         <img
                                 src="images/thumbs/million_ways.png"
                                 alt="Million Ways: Puzzle Journey"
+                                width="1024"
+                                height="1024"
                         >
                     </a>
 
-                    <div class="app-content">
-
-                        <div class="app-topline">
-        <span class="status status-live">
-            Available
-        </span>
-                        </div>
+                    <div class="app-info">
 
                         <h3>
                             <a href="million-ways/">
@@ -292,23 +376,16 @@
                             </a>
                         </h3>
 
-                        <p class="app-subtitle">
-                            Puzzle Journey
-                        </p>
+                        <p>Puzzle Journey</p>
 
-                        <div class="tags">
-                            <span>Puzzle</span>
-                            <span>Travel</span>
-                            <span>Casual</span>
-                        </div>
+                        <div class="app-actions">
 
-                        <div class="app-links">
                             <a
-                                    href="https://play.google.com/store/apps/details?id=dev.kynest.million_ways&hl=en"
+                                    href="https://play.google.com/store/apps/details?id=dev.kynest.million_ways&amp;hl=en"
                                     target="_blank"
                                     rel="noopener noreferrer"
                             >
-                                Google Play
+                                Google Play ↗
                             </a>
 
                             <a
@@ -316,143 +393,185 @@
                                     target="_blank"
                                     rel="noopener noreferrer"
                             >
-                                App Store
+                                App Store ↗
                             </a>
 
                             <a href="million-ways/">
                                 Details →
                             </a>
-                        </div>
 
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <!-- Just Interval -->
+                <article class="app-entry">
+
+                    <a
+                            class="app-cover"
+                            href="just-interval/"
+                            aria-label="Just Interval details"
+                    >
+                        <img
+                                src="images/thumbs/just_interval.png"
+                                alt="Just Interval"
+                                width="1024"
+                                height="1024"
+                                loading="lazy"
+                        >
+                    </a>
+
+                    <div class="app-info">
+
+                        <h3>
+                            <a href="just-interval/">
+                                Just Interval
+                            </a>
+                        </h3>
+
+                        <p>
+                            Minimal &amp; Powerful Interval Timer
+                        </p>
+
+                        <div class="app-actions">
+
+                            <a
+                                    href="https://play.google.com/store/apps/details?id=dev.just_interval&amp;hl=en"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                            >
+                                Google Play ↗
+                            </a>
+
+                            <a
+                                    href="https://apps.apple.com/us/app/just-interval-workout-timer/id6755115302"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                            >
+                                App Store ↗
+                            </a>
+
+                            <a href="just-interval/">
+                                Details →
+                            </a>
+
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <!-- Kound -->
+                <article class="app-entry">
+
+                    <a
+                            class="app-cover"
+                            href="kound/"
+                            aria-label="Kound details"
+                    >
+                        <img
+                                src="images/thumbs/kound.png"
+                                alt="Kound"
+                                width="1024"
+                                height="1024"
+                                loading="lazy"
+                        >
+                    </a>
+
+                    <div class="app-info">
+
+                        <h3>
+                            <a href="kound/">
+                                Kound
+                            </a>
+                        </h3>
+
+                        <p>Learn the Korean Alphabet</p>
+
+                        <div class="app-actions">
+
+                            <a
+                                    href="https://play.google.com/store/apps/details?id=dev.kynest.kound&amp;hl=en"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                            >
+                                Google Play ↗
+                            </a>
+
+                            <a
+                                    href="https://apps.apple.com/kr/app/kound-learn-korean-alphabet/id6754219915"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                            >
+                                App Store ↗
+                            </a>
+
+                            <a href="kound/">
+                                Details →
+                            </a>
+
+                        </div>
                     </div>
 
                 </article>
 
             </div>
-
         </div>
     </section>
 
 
-    <!-- What We Build -->
-    <section id="about" class="section section-muted">
-        <div class="container">
+    <!-- About -->
+    <section id="about" class="info-section">
+        <div class="container info-grid">
 
-            <div class="section-heading">
-                <span class="section-label">What We Build</span>
-                <h2>Focused experiences, without the clutter.</h2>
-            </div>
+            <h2>About</h2>
 
-            <div class="build-grid">
-
-                <div class="build-card">
-                    <div class="build-number">01</div>
-                    <h3>Utility</h3>
-                    <p>
-                        Simple tools designed to make everyday tasks
-                        easier without unnecessary complexity.
-                    </p>
-                </div>
-
-                <div class="build-card">
-                    <div class="build-number">02</div>
-                    <h3>Learning</h3>
-                    <p>
-                        Clear and approachable learning experiences
-                        built around practical progress.
-                    </p>
-                </div>
-
-                <div class="build-card">
-                    <div class="build-number">03</div>
-                    <h3>Games</h3>
-                    <p>
-                        Relaxing interactive experiences with
-                        thoughtful systems and strong visual identity.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="about-text">
-
-                <span class="section-label">
-                    About Kynest
-                </span>
-
-                <h2>
-                    Independent by design.
-                </h2>
-
-                <p>
-                    Kynest Studio is an independent mobile app studio based in
-                    South Korea. We focus on creating products that are easy
-                    to understand, pleasant to use, and built with attention
-                    to the details that matter.
-                </p>
-
-            </div>
+            <p>
+                Kynest Studio is an independent mobile app
+                studio based in South Korea. We develop
+                apps and games for iOS and Android.
+            </p>
 
         </div>
     </section>
 
 
     <!-- Contact -->
-    <section id="contact" class="section studio-contact-section">
+    <section id="contact" class="info-section">
+        <div class="container info-grid">
 
-        <div class="container">
+            <h2>Contact</h2>
 
-            <div class="studio-contact-heading">
-
-            <span class="section-label">
-                Contact
-            </span>
-
-                <h2>
-                    Get in touch.
-                </h2>
+            <div>
 
                 <p>
-                    Have a question, a project in mind, or an idea you'd like to discuss?
-                    We'd love to hear from you.
+                    Questions or feedback?
+                    Feel free to get in touch.
                 </p>
 
                 <a
+                        class="contact-link"
                         href="https://tally.so/r/GxP8pj"
-                        class="contact-button"
                 >
-                    Contact Kynest Studio →
+                    Send a message →
                 </a>
 
             </div>
 
         </div>
-
     </section>
 
 </main>
 
 
+<!-- Footer -->
 <footer class="site-footer">
-    <div class="container footer-content">
-
-        <div>
-            <strong>Kynest Studio</strong>
-            <p>Independent Mobile App Studio</p>
-        </div>
-
-        <div class="footer-links">
-            <a href="#apps">Apps</a>
-            <a href="#about">About</a>
-            <a href="#contact">Support & Contact</a>
-        </div>
-
-        <div class="copyright">
-            © 2026 Kynest Studio. All rights reserved.
-        </div>
-
+    <div class="container simple-footer">
+        © 2026 Kynest Studio. All rights reserved.
     </div>
 </footer>
+
 </body>
 </html>
