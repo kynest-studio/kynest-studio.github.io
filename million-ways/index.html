@@ -11,19 +11,77 @@
             content="Million Ways: Puzzle Journey is a relaxing travel photo puzzle game. Complete real travel photos, discover hidden places, collect souvenirs, and build your own journey album."
     >
 
+    <!-- Social Sharing / Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kynest Studio">
+    <meta property="og:title" content="Million Ways: Puzzle Journey">
+    <meta property="og:description"
+          content="Travel the world through relaxing photo puzzles. Discover real places and build your own travel album.">
+    <meta property="og:url"
+          content="https://kyneststudio.com/million-ways/">
+    <meta property="og:image"
+          content="https://kyneststudio.com/images/share/million-ways-share.png">
+    <meta property="og:image:secure_url"
+          content="https://kyneststudio.com/images/share/million-ways-share.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt"
+          content="Million Ways: Puzzle Journey - Travel Photo Puzzle Game">
+
+    <!-- X / Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Million Ways: Puzzle Journey">
+    <meta name="twitter:description"
+          content="Travel the world through relaxing photo puzzles. Discover real places and build your own travel album.">
+    <meta name="twitter:image"
+          content="https://kyneststudio.com/images/share/million-ways-share.png">
+
     <link rel="icon" href="../images/kynest_logo.png">
     <link rel="stylesheet" href="../assets/css/app.css">
-
     <style>
         /* Match the video to the existing vertical screenshots. */
-  .screenshot iframe {
-    display: block;
-    width: 100%;
-    aspect-ratio: 9 / 16;
-    height: auto;
-    border: 0;
-    background: #000;
-}
+        .screenshot iframe {
+            display: block;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            height: auto;
+            border: 0;
+            background: #000;
+        }
+
+        /* Official Store Badges */
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hero-buttons .store-badge-link {
+            display: block;
+            width: 200px;
+            flex: 0 0 200px;
+            padding: 0;
+            border: none;
+            background: transparent;
+            box-shadow: none;
+            line-height: 0;
+            text-decoration: none;
+        }
+
+        .hero-buttons .store-badge-link img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons .store-badge-link {
+                width: 180px;
+                flex-basis: 180px;
+            }
+        }
     </style>
 </head>
 
@@ -97,22 +155,28 @@
 
                     <a
                             href="https://play.google.com/store/apps/details?id=dev.kynest.million_ways&amp;hl=en"
-                            class="store-button store-button-primary"
+                            class="store-badge-link"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Download on Google Play"
                     >
-                        <span class="store-small">Get it on</span>
-                        <span>Google Play</span>
+                        <img
+                                src="../images/badges/google-play.png"
+                                alt="Get it on Google Play"
+                        >
                     </a>
 
                     <a
                             href="https://apps.apple.com/app/id6803858678"
-                            class="store-button"
+                            class="store-badge-link"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Download on the App Store"
                     >
-                        <span class="store-small">Download on the</span>
-                        <span>App Store</span>
+                        <img
+                                src="../images/badges/app-store.png"
+                                alt="Download on the App Store"
+                        >
                     </a>
 
                 </div>
