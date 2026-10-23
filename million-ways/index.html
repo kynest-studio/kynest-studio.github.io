@@ -82,6 +82,102 @@
                 flex-basis: 180px;
             }
         }
+
+    /* The Feeling of the Journey */
+    .journey-feelings {
+        background: #f4f0e9;
+        color: #2d3c3b;
+        padding: clamp(72px, 9vw, 120px) 0;
+    }
+
+    .journey-intro {
+        max-width: 700px;
+        margin: 0 auto 52px;
+        text-align: center;
+    }
+
+    .journey-eyebrow {
+        display: block;
+        color: #756143;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+    }
+
+    .journey-intro h2 {
+        margin: 20px 0;
+        font-family: Georgia, serif;
+        font-size: clamp(36px, 5vw, 58px);
+        font-weight: 400;
+        line-height: 1.18;
+        color: #2d3c3b;
+    }
+
+    .journey-intro p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.8;
+        color: #65736d;
+    }
+
+    .journey-notes {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .journey-note {
+        display: flex;
+        flex-direction: column;
+        min-height: 250px;
+        padding: 32px 28px;
+        border: 1px solid rgba(52, 77, 72, 0.12);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.65);
+    }
+
+    .journey-note-label {
+        color: #756143;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+    }
+
+    .journey-note blockquote {
+        margin: 26px 0 30px;
+        padding: 0;
+        font-family: Georgia, serif;
+        font-size: clamp(22px, 2vw, 28px);
+        font-style: italic;
+        line-height: 1.45;
+        color: #344d48;
+    }
+
+    .journey-note-caption {
+        margin-top: auto;
+        font-size: 13px;
+        color: #65736d;
+    }
+
+    @media (max-width: 760px) {
+        .journey-intro {
+            margin-bottom: 32px;
+        }
+
+        .journey-notes {
+            grid-template-columns: 1fr;
+        }
+
+        .journey-note {
+            min-height: auto;
+            padding: 26px;
+        }
+
+        .journey-note blockquote {
+            margin: 20px 0 24px;
+        }
+    }
+
     </style>
 </head>
 
@@ -281,136 +377,69 @@
     </section>
 
 
-    <!-- Features -->
-    <section id="features" class="section section-muted">
+    <!-- The Feeling of the Journey -->
+    <section id="features" class="section journey-feelings">
 
         <div class="container">
 
-            <div class="section-heading">
-
-                <span class="section-label">
-                    Core Features
-                </span>
+            <div class="journey-intro">
+            <span class="journey-eyebrow">
+                THE FEELING OF THE JOURNEY
+            </span>
 
                 <h2>
-                    Your journey, one puzzle at a time.
+                    A little journey.<br>
+                    A peaceful moment.
                 </h2>
 
                 <p>
-                    Relax with real travel photos, discover new destinations,
-                    and collect memories from every stop along the way.
+                    Discover the joy of traveling through photos,
+                    one puzzle at a time.
                 </p>
-
             </div>
 
+            <div class="journey-notes">
 
-            <div class="feature-grid">
+                <article class="journey-note">
+                <span class="journey-note-label">
+                    UNWIND
+                </span>
 
-                <article class="feature-card">
+                    <blockquote>
+                        “A quiet escape from the everyday.”
+                    </blockquote>
 
-                    <span class="feature-number">
-                        01
-                    </span>
-
-                    <h3>
-                        Real Travel Photo Puzzles
-                    </h3>
-
-                    <p>
-                        Complete relaxing puzzles made from real photographs
-                        of destinations around the world.
-                    </p>
-
+                    <span class="journey-note-caption">
+                    A moment to relax
+                </span>
                 </article>
 
+                <article class="journey-note">
+                <span class="journey-note-label">
+                    EXPLORE
+                </span>
 
-                <article class="feature-card">
+                    <blockquote>
+                        “Every picture opens a new destination.”
+                    </blockquote>
 
-                    <span class="feature-number">
-                        02
-                    </span>
-
-                    <h3>
-                        Travel Across Countries
-                    </h3>
-
-                    <p>
-                        Visit famous landmarks, beautiful scenery, and memorable
-                        places as each stage becomes another stop on your journey.
-                    </p>
-
+                    <span class="journey-note-caption">
+                    The feeling of travel
+                </span>
                 </article>
 
+                <article class="journey-note">
+                <span class="journey-note-label">
+                    TAKE YOUR TIME
+                </span>
 
-                <article class="feature-card">
+                    <blockquote>
+                        “No timer. No competition. Just your own pace.”
+                    </blockquote>
 
-                    <span class="feature-number">
-                        03
-                    </span>
-
-                    <h3>
-                        Relax at Your Own Pace
-                    </h3>
-
-                    <p>
-                        Enjoy calm, pressure-free gameplay with simple controls,
-                        no time limits, and no competition.
-                    </p>
-
-                </article>
-
-
-                <article class="feature-card">
-
-                    <span class="feature-number">
-                        04
-                    </span>
-
-                    <h3>
-                        Build Your Travel Album
-                    </h3>
-
-                    <p>
-                        Keep completed photos, revisit places you have explored,
-                        and watch your personal travel album grow.
-                    </p>
-
-                </article>
-
-
-                <article class="feature-card">
-
-                    <span class="feature-number">
-                        05
-                    </span>
-
-                    <h3>
-                        Discover Hidden Spots
-                    </h3>
-
-                    <p>
-                        Look beyond the main route and uncover special hidden
-                        locations waiting to be discovered along the way.
-                    </p>
-
-                </article>
-
-
-                <article class="feature-card">
-
-                    <span class="feature-number">
-                        06
-                    </span>
-
-                    <h3>
-                        Collect Souvenirs
-                    </h3>
-
-                    <p>
-                        Find unique felt patch souvenirs inspired by your travels
-                        and collect memories from destinations around the world.
-                    </p>
-
+                    <span class="journey-note-caption">
+                    A journey without pressure
+                </span>
                 </article>
 
             </div>
