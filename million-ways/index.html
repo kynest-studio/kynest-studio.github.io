@@ -51,12 +51,13 @@
         }
 
         /* Official Store Badges */
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 12px;
-        }
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    scroll-margin-top: 100px;
+}
 
         .hero-buttons .store-badge-link {
             display: block;
@@ -70,11 +71,27 @@
             text-decoration: none;
         }
 
-        .hero-buttons .store-badge-link img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
+  .hero-buttons .store-badge-link img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-buttons .store-badge-link {
+    transition: transform 0.2s ease;
+}
+
+@media (hover: hover) {
+    .hero-buttons .store-badge-link:hover {
+        transform: translateY(-3px);
+    }
+}
+
+.hero-buttons .store-badge-link:focus-visible {
+    outline: 2px solid #a8ddb9;
+    outline-offset: 4px;
+    border-radius: 8px;
+}
 
         @media (max-width: 480px) {
             .hero-buttons .store-badge-link {
@@ -126,15 +143,20 @@
         gap: 20px;
     }
 
-    .journey-note {
-        display: flex;
-        flex-direction: column;
-        min-height: 250px;
-        padding: 32px 28px;
-        border: 1px solid rgba(52, 77, 72, 0.12);
-        border-radius: 20px;
-        background: rgba(255, 255, 255, 0.65);
-    }
+.journey-note {
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+    padding: 32px 28px;
+
+    border: 1px solid rgba(52, 77, 72, 0.10);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    box-shadow:
+        0 12px 36px rgba(52, 77, 72, 0.055);
+}
 
     .journey-note-label {
         color: #756143;
@@ -193,7 +215,7 @@
 
         <nav class="nav-links" aria-label="Main navigation">
             <a href="#screenshots">Screenshots</a>
-            <a href="#features">Features</a>
+            <a href="#journey">Experience</a>
             <a href="#download">Download</a>
             <a href="support.html">Support</a>
         </nav>
@@ -247,7 +269,7 @@
                     and build your own travel album as your journey unfolds.
                 </p>
 
-                <div class="hero-buttons">
+                <div class="hero-buttons" id="download">
 
                     <a
                             href="https://play.google.com/store/apps/details?id=dev.kynest.million_ways&amp;hl=en"
@@ -378,7 +400,7 @@
 
 
     <!-- The Feeling of the Journey -->
-    <section id="features" class="section journey-feelings">
+    <section id="journey" class="section journey-feelings">
 
         <div class="container">
 
@@ -441,57 +463,6 @@
                     A journey without pressure
                 </span>
                 </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Download -->
-    <section id="download" class="section download-section">
-
-        <div class="container download-panel">
-
-            <div>
-
-                <span class="section-label">
-                    Available Now
-                </span>
-
-                <h2>
-                    Start your journey.
-                </h2>
-
-                <p>
-                    Download Million Ways on the App Store or Google Play.
-                </p>
-
-            </div>
-
-
-            <div class="download-buttons">
-
-                <a
-                        href="https://play.google.com/store/apps/details?id=dev.kynest.million_ways&amp;hl=en"
-                        class="store-button store-button-primary"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                >
-                    <span class="store-small">Get it on</span>
-                    <span>Google Play</span>
-                </a>
-
-                <a
-                        href="https://apps.apple.com/app/id6803858678"
-                        class="store-button"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                >
-                    <span class="store-small">Download on the</span>
-                    <span>App Store</span>
-                </a>
 
             </div>
 
