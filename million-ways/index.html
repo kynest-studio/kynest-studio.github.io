@@ -51,13 +51,13 @@
         }
 
         /* Official Store Badges */
-  .hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px;
-    scroll-margin-top: 100px;
-}
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+            scroll-margin-top: 100px;
+        }
 
         .hero-buttons .store-badge-link {
             display: block;
@@ -69,137 +69,140 @@
             box-shadow: none;
             line-height: 0;
             text-decoration: none;
+            transition: transform 0.2s ease;
         }
 
-  .hero-buttons .store-badge-link img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
+        .hero-buttons .store-badge-link img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
 
-.hero-buttons .store-badge-link {
-    transition: transform 0.2s ease;
-}
-
-@media (hover: hover) {
-    .hero-buttons .store-badge-link:hover {
-        transform: translateY(-3px);
-    }
-}
-
-.hero-buttons .store-badge-link:focus-visible {
-    outline: 2px solid #a8ddb9;
-    outline-offset: 4px;
-    border-radius: 8px;
-}
-
-        @media (max-width: 480px) {
-            .hero-buttons .store-badge-link {
-                width: 180px;
-                flex-basis: 180px;
+        @media (hover: hover) {
+            .hero-buttons .store-badge-link:hover {
+                transform: translateY(-3px);
             }
         }
 
-    /* The Feeling of the Journey */
-    .journey-feelings {
-        background: #f4f0e9;
-        color: #2d3c3b;
-        padding: clamp(72px, 9vw, 120px) 0;
-    }
+        .hero-buttons .store-badge-link:focus-visible {
+            outline: 2px solid #a8ddb9;
+            outline-offset: 4px;
+            border-radius: 8px;
+        }
 
-    .journey-intro {
-        max-width: 700px;
-        margin: 0 auto 52px;
-        text-align: center;
-    }
+        /* On mobile, keep both badges side-by-side with no extra vertical gap. */
+        @media (max-width: 720px) {
+            .hero-buttons {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+            }
 
-    .journey-eyebrow {
-        display: block;
-        color: #756143;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 0.18em;
-    }
+            .hero-buttons .store-badge-link {
+                flex: 1 1 0;
+                width: auto;
+                max-width: 200px;
+                min-width: 0;
+            }
+        }
 
-    .journey-intro h2 {
-        margin: 20px 0;
-        font-family: Georgia, serif;
-        font-size: clamp(36px, 5vw, 58px);
-        font-weight: 400;
-        line-height: 1.18;
-        color: #2d3c3b;
-    }
+        /* The Feeling of the Journey — dark theme */
+        .journey-feelings {
+            background: #141416;
+            color: #f5f5f7;
+            padding: clamp(72px, 9vw, 120px) 0;
+        }
 
-    .journey-intro p {
-        margin: 0;
-        font-size: 16px;
-        line-height: 1.8;
-        color: #65736d;
-    }
-
-    .journey-notes {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 20px;
-    }
-
-.journey-note {
-    display: flex;
-    flex-direction: column;
-    min-height: 250px;
-    padding: 32px 28px;
-
-    border: 1px solid rgba(52, 77, 72, 0.10);
-    border-radius: 20px;
-
-    background: rgba(255, 255, 255, 0.72);
-
-    box-shadow:
-        0 12px 36px rgba(52, 77, 72, 0.055);
-}
-
-    .journey-note-label {
-        color: #756143;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.15em;
-    }
-
-    .journey-note blockquote {
-        margin: 26px 0 30px;
-        padding: 0;
-        font-family: Georgia, serif;
-        font-size: clamp(22px, 2vw, 28px);
-        font-style: italic;
-        line-height: 1.45;
-        color: #344d48;
-    }
-
-    .journey-note-caption {
-        margin-top: auto;
-        font-size: 13px;
-        color: #65736d;
-    }
-
-    @media (max-width: 760px) {
         .journey-intro {
-            margin-bottom: 32px;
+            max-width: 700px;
+            margin: 0 auto 52px;
+            text-align: center;
+        }
+
+        .journey-eyebrow {
+            display: block;
+            color: #a8ddb9;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+        }
+
+        .journey-intro h2 {
+            margin: 20px 0;
+            font-family: Georgia, serif;
+            font-size: clamp(36px, 5vw, 58px);
+            font-weight: 400;
+            line-height: 1.18;
+            color: #f5f5f7;
+        }
+
+        .journey-intro p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #a7a7ae;
         }
 
         .journey-notes {
-            grid-template-columns: 1fr;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
         }
 
         .journey-note {
-            min-height: auto;
-            padding: 26px;
+            display: flex;
+            flex-direction: column;
+            min-height: 250px;
+            padding: 32px 28px;
+            border: 1px solid #34343a;
+            border-radius: 20px;
+            background: #1e1e22;
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
+        }
+
+        .journey-note-label {
+            color: #a8ddb9;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
         }
 
         .journey-note blockquote {
-            margin: 20px 0 24px;
+            margin: 26px 0 30px;
+            padding: 0;
+            font-family: Georgia, serif;
+            font-size: clamp(22px, 2vw, 28px);
+            font-style: italic;
+            line-height: 1.45;
+            color: #f5f5f7;
         }
-    }
 
+        .journey-note-caption {
+            margin-top: auto;
+            font-size: 13px;
+            color: #a7a7ae;
+        }
+
+        @media (max-width: 760px) {
+            .journey-intro {
+                margin-bottom: 32px;
+            }
+
+            .journey-notes {
+                grid-template-columns: 1fr;
+            }
+
+            .journey-note {
+                min-height: auto;
+                padding: 26px;
+            }
+
+            .journey-note blockquote {
+                margin: 20px 0 24px;
+            }
+        }
     </style>
 </head>
 
