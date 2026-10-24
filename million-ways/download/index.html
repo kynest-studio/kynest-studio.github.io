@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Download Million Ways: Puzzle Journey</title>
+
+    <meta name="description"
+          content="Download Million Ways: Puzzle Journey for Android and iPhone. Travel the world through relaxing photo puzzles.">
+
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kynest Studio">
+    <meta property="og:title"
+          content="Million Ways: Puzzle Journey">
+    <meta property="og:description"
+          content="Travel the World in Photos. Available on Google Play and the App Store.">
+    <meta property="og:url"
+          content="https://kyneststudio.com/million-ways/download/">
+    <meta property="og:image"
+          content="https://kyneststudio.com/images/share/million-ways-share.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt"
+          content="Million Ways: Puzzle Journey">
+
+    <!-- X / Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title"
+          content="Million Ways: Puzzle Journey">
+    <meta name="twitter:description"
+          content="Travel the World in Photos. Download for Android and iPhone.">
+    <meta name="twitter:image"
+          content="https://kyneststudio.com/images/share/million-ways-share.png">
+
+    <link rel="icon"
+          href="/images/thumbs/million_ways.png">
+
+    <!-- Existing shared stylesheet -->
+    <link rel="stylesheet"
+          href="/assets/css/app.css">
+
+    <style>
+        /* Download Landing Page */
+
+        body {
+            min-height: 100vh;
+            min-height: 100svh;
+            background: #0d0d0f;
+        }
+
+        .download-landing {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: calc(100svh - 76px);
+            padding: 56px 0 72px;
+        }
+
+        .download-content {
+            width: min(820px, calc(100% - 40px));
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Promotional Image */
+
+        .download-hero {
+            width: 100%;
+            margin: 0 auto;
+
+            border-radius: 18px;
+            overflow: hidden;
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
+
+            box-shadow:
+                0 24px 70px rgba(0, 0, 0, 0.3);
+        }
+
+        .download-hero img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Download Heading */
+
+        .download-title {
+            margin: 38px 0 0;
+
+            color: #f5f5f7;
+
+            font-size: clamp(24px, 4vw, 34px);
+            font-weight: 650;
+            line-height: 1.3;
+            letter-spacing: -0.035em;
+        }
+
+        /* Store Badges */
+
+        .download-stores {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            align-items: center;
+            gap: 14px;
+
+            width: 100%;
+            max-width: 430px;
+
+            margin: 28px auto 0;
+        }
+
+        .download-store-link {
+            display: block;
+            min-width: 0;
+
+            border-radius: 8px;
+            line-height: 0;
+
+            transition:
+                transform 0.2s ease,
+                opacity 0.2s ease;
+        }
+
+        .download-store-link img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        @media (hover: hover) {
+            .download-store-link:hover {
+                transform: translateY(-3px);
+                opacity: 0.9;
+            }
+        }
+
+        .download-store-link:focus-visible {
+            outline: 2px solid #a8ddb9;
+            outline-offset: 4px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 720px) {
+            .download-landing {
+                min-height: calc(100svh - 74px);
+                padding: 40px 0 56px;
+            }
+
+            .download-content {
+                width: calc(100% - 32px);
+            }
+
+            .download-hero {
+                border-radius: 12px;
+            }
+
+            .download-title {
+                margin-top: 32px;
+                font-size: 25px;
+            }
+
+            .download-stores {
+                gap: 10px;
+                margin-top: 24px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .download-store-link {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Company Header -->
+<header class="site-header">
+    <div class="container nav-container">
+
+        <a href="/" class="brand">
+            <img
+                    src="/images/kynest_logo.png"
+                    alt="Kynest Studio"
+            >
+            <span>Kynest Studio</span>
+        </a>
+
+    </div>
+</header>
+
+<!-- Download Landing -->
+<main class="download-landing">
+
+    <div class="download-content">
+
+        <!-- Game Promotional Image -->
+        <div class="download-hero">
+            <img
+                    src="/images/share/million-ways-share.png"
+                    alt="Million Ways: Puzzle Journey"
+                    width="1200"
+                    height="630"
+                    fetchpriority="high"
+            >
+        </div>
+
+        <h1 class="download-title">
+            Download Million Ways
+        </h1>
+
+        <!-- Store Buttons -->
+        <div class="download-stores">
+
+            <!-- Google Play -->
+            <a
+                    class="download-store-link"
+                    href="https://play.google.com/store/apps/details?id=dev.kynest.million_ways"
+                    aria-label="Get it on Google Play"
+            >
+                <img
+                        src="/images/badges/google-play.png"
+                        alt="Get it on Google Play"
+                        width="401"
+                        height="120"
+                >
+            </a>
+
+            <!-- App Store -->
+            <a
+                    class="download-store-link"
+                    href="https://apps.apple.com/app/id6803858678"
+                    aria-label="Download on the App Store"
+            >
+                <img
+                        src="/images/badges/app-store.png"
+                        alt="Download on the App Store"
+                        width="401"
+                        height="120"
+                >
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+</body>
+</html>
